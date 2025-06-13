@@ -511,7 +511,7 @@
             }
 
             .month-card {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr !important;
                 gap: 25px;
                 padding: 25px;
                 margin-left: 40px;
@@ -521,7 +521,18 @@
                 left: -50px !important;
                 right: auto !important;
             }
+            .month-info {
 
+                order: 2; /* Texto sempre embaixo */
+
+            }
+            .photo-container {
+                order: 1; /* Foto sempre em cima */
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+
+            }
             .month-info h2 {
                 font-size: 1.8rem;
             }
@@ -572,6 +583,44 @@
                 height: 15px;
             }
         }
+        
+
+            .photo-container {
+
+                aspect-ratio: 3/2; /* Ajusta proporção para telas pequenas */
+            }
+
+        }
+
+
+
+        /* Media query adicional para tablets */
+
+        @media (max-width: 1024px) and (min-width: 769px) {
+
+            .month-card {
+
+                gap: 30px;
+
+                padding: 30px;
+
+            }
+
+
+
+            .month-info h2 {
+
+                font-size: 2rem;
+
+            }
+
+
+
+            .month-info p {
+
+                font-size: 1rem;
+
+            }
 
         /* Animações de entrada */
         @keyframes fadeInDown {
@@ -664,7 +713,7 @@
             <div class="month-card">
                 <div class="photo-container">
                     <div class="photo-placeholder">
-                        <img src="presente5/img/primeira.jpeg" alt="Nossas aventuras espontâneas" class="photo">
+                        <img src="presente5/img/primeira.jpeg" alt="Nossas aventuras " class="photo">
                     </div>
                 </div>
                 <div class="month-info">
